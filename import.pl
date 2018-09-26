@@ -19,7 +19,7 @@ my $end = $database->last_record;
 my $updatefile="$cwd/influxdb_load.csv";
 unless (open(INFLUXUPD, ">>$updatefile")) { die("sub update_rrd_IO: Can not open $updatefile\n"); }
 
-# Read each line in File
+# Read each line in file
 for my $i (1..$end)
 {
 my @fields = $database->get_record ($i);
